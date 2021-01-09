@@ -1,7 +1,7 @@
 class Star {
 	constructor() {
 		this.lifeTime = 255;
-		this.r = random(2, 5);
+		this.r = random(1, 5);
 		this.pos = createVector(random(width), random(height));
 	}
 

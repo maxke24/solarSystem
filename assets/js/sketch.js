@@ -11,6 +11,9 @@ let neptuneD = 49244;
 let uranusD = 50724;
 let saturnD = 116460;
 let jupiterD = 139820;
+let scaleSize = 1;
+let x = 0;
+let y = 0;
 
 let sunImgPath = "assets/media/sun.svg";
 let mercuryImgPath = "assets/media/mercury.svg";
@@ -86,13 +89,19 @@ function setup() {
 }
 
 function draw() {
-	// let scaleSize = 1; //map(mouseY, 0, height, 3, 1);
-	// scale(scaleSize);
-	// translate(-width / 5, -height / 5);
+	if(scaleSize <= 5){
+		scaleSize += 0.001;
+		x = map(scaleSize, 1, 5, 0, -3000);
+		y = map(scaleSize, 1, 5, 0, -1520);
+/*		x -= 1;
+		y -= 0.5;*/
+
+	}
+	translate(x, y);
+	scale(scaleSize);
 	background(25);
 	stroke(255, 201, 67);
 	fill(255, 201, 67);
-	// ellipse(x1, y1, r1);
 	image(sunImg, x1 - r1 / 2, y1 - r1 / 2, r1, r1);
 	planets.forEach((planet) => {
 		planet.update();
@@ -110,6 +119,4 @@ function draw() {
 			stars.splice(i, 1);
 		}
 	}
-	stroke(255, 0, 0);
-	ellipse(width / 2, height / 2, 10, 10);
 }
