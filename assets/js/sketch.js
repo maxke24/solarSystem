@@ -86,6 +86,9 @@ function setup() {
 }
 
 function draw() {
+	// let scaleSize = 1; //map(mouseY, 0, height, 3, 1);
+	// scale(scaleSize);
+	// translate(-width / 5, -height / 5);
 	background(25);
 	stroke(255, 201, 67);
 	fill(255, 201, 67);
@@ -107,4 +110,6 @@ function draw() {
 			stars.splice(i, 1);
 		}
 	}
+	stroke(255, 0, 0);
+	ellipse(width / 2, height / 2, 10, 10);
 }

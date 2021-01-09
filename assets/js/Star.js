@@ -10,8 +10,8 @@ class Star {
 	}
 
 	show() {
-		stroke(255, this.lifeTime);
 		fill(255, this.lifeTime);
+		noStroke();
 		ellipse(this.pos.x, this.pos.y, this.r);
 	}
 }
