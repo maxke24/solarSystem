@@ -89,14 +89,15 @@ function setup() {
 }
 
 function draw() {
-	if(scaleSize <= 5){
-		scaleSize += 0.001;
-		x = map(scaleSize, 1, 5, 0, -3000);
-		y = map(scaleSize, 1, 5, 0, -1520);
-/*		x -= 1;
-		y -= 0.5;*/
+// 	This is still WIP
+// 	if(scaleSize <= 5){
+// 		scaleSize += 0.001;
+// 		x = map(scaleSize, 1, 5, 0, -3000);
+// 		y = map(scaleSize, 1, 5, 0, -1520);
+// /*		x -= 1;
+// 		y -= 0.5;*/
 
-	}
+// 	} 
 	translate(x, y);
 	scale(scaleSize);
 	background(25);
